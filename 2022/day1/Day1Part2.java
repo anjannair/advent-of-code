@@ -3,8 +3,9 @@ import java.util.*;
 
 public class Day1Part2 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        long startTime = System.nanoTime();
         // Read input
-        try (BufferedReader br = new BufferedReader(new FileReader("advent-of-code/2022/day1/day1input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("2022/day1/day1input.txt"))) {
             String line = br.readLine();
             ArrayList<Integer> list = new ArrayList<>();
             int sum = 0;
@@ -25,7 +26,10 @@ public class Day1Part2 {
                 line = br.readLine();
             }
             Collections.sort(list);
-            System.out.println(list.get(list.size()-1)+list.get(list.size()-2)+list.get(list.size()-3));
+            System.out.println(list.get(list.size() - 1) + list.get(list.size() - 2) + list.get(list.size() - 3));
+            long endTime = System.nanoTime();
+            double totalTime = (endTime - startTime) / (double) 1000000;
+            System.out.println("Time taken: " + totalTime + "ms");
         }
 
     }

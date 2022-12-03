@@ -3,7 +3,8 @@ import java.util.Arrays;
 
 public class Day2Part2 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("advent-of-code/2022/day2/day2input.txt"))) {
+        long startTime = System.nanoTime();
+        try (BufferedReader br = new BufferedReader(new FileReader("2022/day2/day2input.txt"))) {
             String line = br.readLine();
             String[] elves = { "A", "B", "C" };
             String[] person = { "X", "Y", "Z" };
@@ -36,6 +37,9 @@ public class Day2Part2 {
                 line = br.readLine();
             }
             System.out.println(sum);
+            long endTime = System.nanoTime();
+            double totalTime = (endTime - startTime) / (double) 1000000;
+            System.out.println("Time taken: " + totalTime + "ms");
         }
     }
 }

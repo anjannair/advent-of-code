@@ -2,8 +2,10 @@ import java.io.*;
 
 public class Day1 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
+        // Measure time
+        long startTime = System.nanoTime();
         // Read input
-        try (BufferedReader br = new BufferedReader(new FileReader("advent-of-code/2022/day1/day1input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("2022/day1/day1input.txt"))) {
             String line = br.readLine();
             int sum = 0;
             int res = 0;
@@ -25,6 +27,10 @@ public class Day1 {
             }
             System.out.println(res);
         }
+
+        long endTime = System.nanoTime();
+        double totalTime = (endTime - startTime)/(double)1000000;
+        System.out.println("Time taken: " + totalTime + "ms");
 
     }
 }

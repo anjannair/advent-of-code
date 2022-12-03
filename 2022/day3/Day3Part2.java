@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class Day3Part2 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("advent-of-code/2022/day3/day3input.txt"))) {
+        long startTime = System.nanoTime();
+        try (BufferedReader br = new BufferedReader(new FileReader("2022/day3/day3input.txt"))) {
             String line = br.readLine();
             ArrayList<String> list = new ArrayList<>();
             ArrayList<Character> commons = new ArrayList<>();
@@ -48,6 +49,9 @@ public class Day3Part2 {
                 count++;
             } while (line != null);
             System.out.println(sum);
+            long endTime = System.nanoTime();
+            double totalTime = (endTime - startTime) / (double) 1000000;
+            System.out.println("Time taken: " + totalTime + "ms");
         }
     }
 }

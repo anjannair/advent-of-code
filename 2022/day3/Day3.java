@@ -3,7 +3,8 @@ import java.io.*;
 
 public class Day3 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        try (BufferedReader br = new BufferedReader(new FileReader("advent-of-code/2022/day3/day3input.txt"))) {
+        long startTime = System.nanoTime();
+        try (BufferedReader br = new BufferedReader(new FileReader("2022/day3/day3input.txt"))) {
             String line = br.readLine();
             int sum = 0;
 
@@ -36,6 +37,9 @@ public class Day3 {
                 line = br.readLine();
             }
             System.out.println(sum);
+            long endTime = System.nanoTime();
+            double totalTime = (endTime - startTime) / (double) 1000000;
+            System.out.println("Time taken: " + totalTime + "ms");
         }
     }
 }
