@@ -1,11 +1,15 @@
-import java.io.*;
+package day1;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Day1 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         // Measure time
         long startTime = System.nanoTime();
         // Read input
-        try (BufferedReader br = new BufferedReader(new FileReader("2022/day1/day1input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/2022/src/day1/day1input.txt"))) {
             String line = br.readLine();
             int sum = 0;
             int res = 0;

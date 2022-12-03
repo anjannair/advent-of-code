@@ -1,11 +1,17 @@
-import java.io.*;
-import java.util.*;
+package day1;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Day1Part2 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         long startTime = System.nanoTime();
         // Read input
-        try (BufferedReader br = new BufferedReader(new FileReader("2022/day1/day1input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/2022/src/day1/day1input.txt"))) {
             String line = br.readLine();
             ArrayList<Integer> list = new ArrayList<>();
             int sum = 0;
@@ -33,4 +39,4 @@ public class Day1Part2 {
         }
 
     }
-}
+}	
