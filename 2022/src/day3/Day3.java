@@ -1,5 +1,6 @@
 package day3;
 
+import reusable.RepeatedCode;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -7,8 +8,9 @@ import java.io.IOException;
 
 public class Day3 {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		long startTime = System.nanoTime();
-		try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"/2022/src/day3/day3input.txt"))) {
+		RepeatedCode obj = new RepeatedCode();
+		long startTime = obj.startTime();
+		try (BufferedReader br = obj.getInput(3)) {
 			String line = br.readLine();
 			int sum = 0;
 
@@ -41,9 +43,7 @@ public class Day3 {
 				line = br.readLine();
 			}
 			System.out.println(sum);
-			long endTime = System.nanoTime();
-			double totalTime = (endTime - startTime) / (double) 1000000;
-			System.out.println("Time taken: " + totalTime + "ms");
+			System.out.println("Time taken: " + obj.endTime(startTime) + "ms");
 		}
 	}
 }
