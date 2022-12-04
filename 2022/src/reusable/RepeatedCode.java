@@ -12,6 +12,12 @@ public class RepeatedCode {
 		return br;
 	}
 
+	public BufferedReader getInput(int day, int year) throws FileNotFoundException, IOException {
+		BufferedReader br = new BufferedReader(new FileReader(
+				System.getProperty("user.dir") + "/" + year + "/src/day" + day + "/day" + day + "input.txt"));
+		return br;
+	}
+
 	public long startTime() {
 		return System.nanoTime();
 	}
