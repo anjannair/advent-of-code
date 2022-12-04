@@ -26,18 +26,16 @@ public class Day4 {
 				int start2 = Integer.parseInt(arr[1].split("-")[0]);
 				int end2 = Integer.parseInt(arr[1].split("-")[1]);
 
-				for (int j = start2; j <= end2; j++) {
-					secondCount++;
-				}
-
 				for (int i = start1; i <= end1; i++) {
 					firstCount++;
 					for (int j = start2; j <= end2; j++) {
+						secondCount++;
 						if (i == j)
 							finCount++;
 					}
 				}
-
+				
+				secondCount /= firstCount;
 				int smallest = firstCount < secondCount ? firstCount : secondCount;
 				if (smallest == finCount) {
 					res++;
