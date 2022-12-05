@@ -26,18 +26,17 @@ public class Day5Part2 {
 				list.add(line);
 				line = br.readLine();
 			}
-			
-			for(int i=list.size()-2;i>=0;i--) {
+
+			for (int i = list.size() - 2; i >= 0; i--) {
 				for (int k = 0; k < 9; k++) {
 					// Capture elements 1, 5, 9... (addition of 4)
 					char cap = list.get(i).charAt(k * 3 + (k) + 1);
 					if (Character.isLetter(cap)) {
 						stacks[k].push(cap);
 					}
-				}	
+				}
 			}
-			
-			System.out.println(Arrays.asList(stacks));
+
 			line = br.readLine();
 			while (line != null) {
 				String[] arr = line.split(" ");
@@ -45,9 +44,14 @@ public class Day5Part2 {
 				int from = Integer.parseInt(arr[3]) - 1;
 				int to = Integer.parseInt(arr[5]) - 1;
 
+				// We use a list to store the crates we pop out
+				// After popping it we push the crates from the list in a reverse manner
+				List<Character> crates = new ArrayList<>();
 				for (int i = 0; i < amt; i++) {
-					char pop = stacks[from].pop();
-					stacks[to].push(pop);
+					crates.add(stacks[from].pop());
+				}
+				for (int i = amt - 1; i >= 0; i--) {
+					stacks[to].push(crates.get(i));
 				}
 				line = br.readLine();
 			}
