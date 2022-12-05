@@ -1,11 +1,11 @@
-package day2;
+package day3;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import reusable.RepeatedCode;
 
-public class Day2Part2_2022 {
+public class Day3Part2_2021 {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		// Measure time
 		RepeatedCode obj = new RepeatedCode();
