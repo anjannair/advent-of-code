@@ -29,7 +29,7 @@ public class Day6 {
 				}
 				
 				// Checking for similar values
-				if (!map.containsValue(2) && !map.containsValue(3)) {
+				if (!map.containsValue(2) && !map.containsValue(3) && !map.containsValue(4)) {
 					res = i + 4;
 					break;
 				} else {

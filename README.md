@@ -9,4 +9,4 @@ Note - Your input files may differ from others. To add your own input files you 
 
 `day1input.txt`
 
-The day can be incremented depending on the day you are working on.
+The day can be incremented depending on the day you are working on. So for day 2 the file name will be `day2input.txt` and so on.
