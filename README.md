@@ -5,4 +5,8 @@
 
 Here you will find the solution arranged day wise. For practical purposes I have removed the input files as you can login to AoC and get your own input files.
 
-Note - Your input files may differ from others.
+Note - Your input files may differ from others. To add your own input files you will need to rename your input files to something like the following - 
+
+`day1input.txt`
+
+The day can be incremented depending on the day you are working on.
